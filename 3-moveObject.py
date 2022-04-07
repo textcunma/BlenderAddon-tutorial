@@ -78,7 +78,7 @@ def register():
 def unregister():
     for c in classes:                               # unregister class
         bpy.utils.unregister_class(c)    
-    bpy.types.VIEW3D_MT_object.append(menu_fn)      # add menu (!change : bpy.types.VIEW3D_MT_mesh_add (addPyramid.py etc...)!)
+    bpy.types.VIEW3D_MT_object.remove(menu_fn)      # add menu (!change : bpy.types.VIEW3D_MT_mesh_add (addPyramid.py etc...)!)
 
 if __name__ == "__main__":
     register()
